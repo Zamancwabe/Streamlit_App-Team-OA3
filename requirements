@@ -6,5 +6,4 @@ nltk
 wordcloud
 matplotlib
 Pillow
-sklearn
 scikit-learn
