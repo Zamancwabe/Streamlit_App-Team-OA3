@@ -61,7 +61,7 @@ def main():
     st.title('Anime Recommendation App')
 
     # Image display (replace with your actual path)
-    image_path = r'C:\Users\Zaman\Downloads\the-top-25-greatest-anime-characters-of-all-time_6uv2.jpg'
+    image_path = 'the-top-25-greatest-anime-characters-of-all-time_6uv2.jpg'
     image = Image.open(image_path)
     st.image(image, caption='Anime Recommendations', use_column_width=True)
 
