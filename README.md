@@ -3,5 +3,5 @@ Team members
 Zamancwabe Makhathini
 Asanda Gambu
 Coceka Keto
-Cleragy 
+Cleragy kanuni 
 Phumzile Sibiya 
