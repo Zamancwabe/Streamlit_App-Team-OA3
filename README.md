@@ -1,6 +1,6 @@
 # Streamlit_App-Team-OA3
 Team members 
-Zamancwabe Makhathini
+Zamancwabe Makhathini (zamancwabemakhathini@gmail.com)
 Asanda Gambu
 Coceka Keto
 Cleragy kanuni 
