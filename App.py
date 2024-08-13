@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-from sklearn.metrics.pairwise import linear_kernel
 from PIL import Image
 
 # Paths to the files
@@ -114,7 +113,7 @@ def main():
 
     if selection == "Home":
         st.title('Welcome to AniMatch - Your Personalized Anime Discovery Companion')
-        image_path = 'Picture.jpg'
+        image_path = 'Picture.jpg'  # Ensure this image is in the correct path in your repository
         image = Image.open(image_path)
         st.image(image, caption='Anime Recommendations', use_column_width=True)
         st.write("AniMatch helps you find the perfect anime to watch based on your preferences and viewing history.")
@@ -218,5 +217,5 @@ def main():
         if st.button("Submit Feedback"):
             st.success("Thank you for your feedback!")
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
