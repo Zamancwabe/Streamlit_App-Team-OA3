@@ -114,7 +114,7 @@ def main():
 
     if selection == "Home":
         st.title('Welcome to AniMatch - Your Personalized Anime Discovery Companion')
-        image_path = 'Picture'
+        image_path = 'Picture.jpg'
         image = Image.open(image_path)
         st.image(image, caption='Anime Recommendations', use_column_width=True)
         st.write("AniMatch helps you find the perfect anime to watch based on your preferences and viewing history.")
