@@ -4,9 +4,9 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from PIL import Image
 
-# Paths to the files
-ANIME_FILE_PATH = 'C:/Users/Zaman/Music/AppOA3/Streamlit_App-Team-OA3/anime.xlsx'
-TRAIN_FILE_PATH = 'C:/Users/Zaman/Music/AppOA3/Streamlit_App-Team-OA3/train.csv'
+# Relative paths to the files
+ANIME_FILE_PATH = 'anime.xlsx'
+TRAIN_FILE_PATH = 'train.csv'
 
 # Load data
 @st.cache_data
@@ -113,7 +113,7 @@ def main():
 
     if selection == "Home":
         st.title('Welcome to AniMatch - Your Personalized Anime Discovery Companion')
-        image_path = 'Picture.jpg'  # Ensure this image is in the correct path in your repository
+        image_path = 'Picture.jpg'  # Relative path to the image
         image = Image.open(image_path)
         st.image(image, caption='Anime Recommendations', use_column_width=True)
         st.write("AniMatch helps you find the perfect anime to watch based on your preferences and viewing history.")
@@ -219,3 +219,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
