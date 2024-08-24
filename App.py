@@ -2,12 +2,11 @@ import streamlit as st
 import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-from sklearn.metrics.pairwise import linear_kernel
 from PIL import Image
 
-# Paths to the files
-ANIME_FILE_PATH = 'C:/Users/Zaman/Music/AppOA3/Streamlit_App-Team-OA3/anime.xlsx'
-TRAIN_FILE_PATH = 'C:/Users/Zaman/Music/AppOA3/Streamlit_App-Team-OA3/train.csv'
+# Relative paths to the files
+ANIME_FILE_PATH = 'anime.xlsx'
+TRAIN_FILE_PATH = 'train.csv'
 
 # Load data
 @st.cache_data
@@ -114,11 +113,20 @@ def main():
 
     if selection == "Home":
         st.title('Welcome to AniMatch - Your Personalized Anime Discovery Companion')
-        image_path = 'C:/Users/Zaman/Music/AppOA3/Streamlit_App-Team-OA3/the-top-25-greatest-anime-characters-of-all-time_6uv2.jpg'
-        image = Image.open(image_path)
-        st.image(image, caption='Anime Recommendations', use_column_width=True)
-        st.write("AniMatch helps you find the perfect anime to watch based on your preferences and viewing history.")
 
+        # Update the image path to be relative
+        image_path = 'Picture.jpg'
+        
+        try:
+            # Open and display the image
+            image = Image.open(image_path)
+            st.image(image, caption='Anime Recommendations', use_column_width=True)
+        except FileNotFoundError:
+            # Display an error message if the image file is not found
+            st.error("Image file not found. Please make sure 'Picture.jpg' is in the correct directory.")
+
+        st.write("AniMatch helps you find the perfect anime to watch based on your preferences and viewing history.")
+    
     elif selection == "Team":
         st.title("Our Team")
         st.write("Meet the amazing team behind AniMatch:")
@@ -218,5 +226,5 @@ def main():
         if st.button("Submit Feedback"):
             st.success("Thank you for your feedback!")
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
